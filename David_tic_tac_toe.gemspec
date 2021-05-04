@@ -8,13 +8,13 @@ Gem::Specification.new do |spec|
   spec.authors       = ["David Gasana Manzi"]
   spec.email         = ["gmdavid59@gmail.com"]
 
-  spec.summary       = "TODO: Write a short summary, because RubyGems requires one."
-  spec.description   = "TODO: Write a longer description or delete this line."
+  spec.summary       = "David Tic Tac toe game "
+  # spec.description   = "TODO: Write a longer description or delete this line."
   spec.homepage      = "https://github.com/GASANAMDavid/David_tic_tac_toe"
   spec.license       = "MIT"
   spec.required_ruby_version = Gem::Requirement.new(">= 2.4.0")
 
-  spec.metadata["allowed_push_host"] = "TODO: Set to 'http://mygemserver.com'"
+  # spec.metadata["allowed_push_host"] = "TODO: Set to 'http://mygemserver.com'"
 
   spec.metadata["homepage_uri"] = spec.homepage
   spec.metadata["source_code_uri"] = "https://github.com/GASANAMDavid/David_tic_tac_toe"
