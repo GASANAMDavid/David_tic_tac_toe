@@ -5,7 +5,7 @@ require_relative "David_tic_tac_toe/version"
 module DavidTicTacToe
 
   def self.print
-    puts "Welcome to Tic Tac Toe Game"
+    puts "Welcome to Tic Tac Toe Game using console"
   end
 
   print
