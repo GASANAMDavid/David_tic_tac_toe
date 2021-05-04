@@ -1,5 +1,6 @@
 # frozen_string_literal: true
-# require_relative "../lib/David_tic_tac_toe"
+
+require_relative "../lib/David_tic_tac_toe"
 
 RSpec.describe DavidTicTacToe do
 
