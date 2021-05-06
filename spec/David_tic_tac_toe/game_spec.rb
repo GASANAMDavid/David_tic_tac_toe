@@ -26,4 +26,8 @@ RSpec.describe DavidTicTacToe::Game do
     game.game_board.add_play_to_board([2, 0], 'X')
     expect(game.won_the_game('X')).to eq false
   end
+
+  it "should switch the players" do
+    expect(game.switch_players(game.player1)).to eq game.player2
+  end
 end

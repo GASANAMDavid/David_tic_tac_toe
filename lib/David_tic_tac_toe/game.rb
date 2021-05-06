@@ -8,25 +8,6 @@ module DavidTicTacToe
       @player2 = player2
     end
 
-    def play
-      current_player = player1
-      while true
-        game_board.print_board
-        puts "------------------\n\nPlayer #{current_player.name}'s turn: "
-        input = gets.chomp
-        indices = input.split(' ', 2)
-        indices = indices.map(&:to_i)
-        next unless game_board.valid_position(indices)
-
-        game_board.add_play_to_board(indices, current_player.marker)
-        return "#{current_player.name} has Won!!!!!!!" if won_the_game(current_player.marker)
-        return "No winner! TIED!!!!!!" if game_board.board_full
-
-        current_player = switch_players(current_player)
-
-      end
-    end
-
     def switch_players(current_player)
       return player1 if current_player == player2
       return player2 if current_player == player1
