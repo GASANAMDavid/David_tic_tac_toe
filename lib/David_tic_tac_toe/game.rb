@@ -32,10 +32,10 @@ module DavidTicTacToe
       return player2 if current_player == player1
     end
 
-    def won_the_game(_player_mark)
+    def won_the_game(player_mark)
       board = @game_board.board
       board_size = board.size
-      mark = _player_mark
+      mark = player_mark
 
       board.each do |row|
         return true if row.uniq.count == 1 && row[0] == mark

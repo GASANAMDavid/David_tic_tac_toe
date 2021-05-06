@@ -78,3 +78,13 @@ Metrics/BlockLength:
   Enabled: false
 Lint/ConstantDefinitionInBlock:
   Enabled: false
+Metrics/MethodLength:
+  Enabled: false
+Metrics/AbcSize:
+  Enabled: false
+Style/InfiniteLoop:
+  Enabled: false
+Metrics/PerceivedComplexity:
+  Enabled: false
+Metrics/CyclomaticComplexity:
+  Enabled: false
