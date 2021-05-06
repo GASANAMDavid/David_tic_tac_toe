@@ -1,9 +1,12 @@
 # frozen_string_literal: true
 
 require_relative 'David_tic_tac_toe/version'
+require_relative 'David_tic_tac_toe/board'
+require_relative 'David_tic_tac_toe/player'
+require_relative 'David_tic_tac_toe/game'
 
 module DavidTicTacToe
-  def self.print
-    puts 'Welcome to Tic Tac Toe Game using console'
-  end
+  game = DavidTicTacToe::Game.new(DavidTicTacToe::Board.new, DavidTicTacToe::Player.new('David', 'X'),
+                                  DavidTicTacToe::Player.new('Manzi', 'O'))
+  puts game.play
 end

@@ -72,3 +72,9 @@ Lint/UnexpectedBlockArity:
   Enabled: true 
 Lint/UnmodifiedReduceAccumulator: 
   Enabled: true
+Lint/UselessAssignment:
+  Enabled: false
+Metrics/BlockLength:
+  Enabled: false
+Lint/ConstantDefinitionInBlock:
+  Enabled: false

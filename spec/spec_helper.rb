@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 require "David_tic_tac_toe"
 
 RSpec.configure do |config|
