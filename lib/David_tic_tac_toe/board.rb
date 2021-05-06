@@ -13,7 +13,9 @@ module DavidTicTacToe
     end
 
     def print_board
-      puts @board.to_a
+      (0..2).each do |row|
+        puts board[row].to_s
+      end
     end
 
     def board_full
