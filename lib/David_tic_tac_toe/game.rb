@@ -19,22 +19,28 @@ module DavidTicTacToe
       mark = player_mark
 
       board.each do |row|
-        return true if row.uniq.count == 1 && row[0] == mark
+        return true if check_uniqueness(row, mark)
       end
+
       board.transpose.each do |row|
-        return true if row.uniq.count == 1 && row[0] == mark
+        return true if check_uniqueness(row, mark)
       end
+
       main_diagnal = (0..board_size - 1).collect do |item|
         board[item][item]
       end
 
-      return true if main_diagnal.uniq.count == 1 && main_diagnal[0] == mark
+      return true if check_uniqueness(main_diagnal, mark)
 
       counter_diagnal = (0..board_size - 1).collect do |item|
         board[item][board_size - (item + 1)]
       end
 
-      counter_diagnal.uniq.count == 1 && counter_diagnal[0] == mark
+      check_uniqueness(counter_diagnal, mark)
+    end
+
+    def check_uniqueness(row, mark)
+      row.uniq.count == 1 && row[0] == mark
     end
   end
 end
