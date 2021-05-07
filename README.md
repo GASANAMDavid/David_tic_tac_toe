@@ -6,7 +6,7 @@ Welcome to Tica Tac Toe Game! In this directory, you'll find the files you need 
 
 Clone this repo
 
-    $ git clone
+    $ git clone https://github.com/GASANAMDavid/David_tic_tac_toe.git
 
 And then execute:
 
