@@ -1,16 +1,12 @@
 # DavidTicTacToe
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/David_tic_tac_toe`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Welcome to Tica Tac Toe Game! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/David_tic_tac_toe`.
 
 ## Installation
 
-Add this line to your application's Gemfile:
+Clone this repo
 
-```ruby
-gem 'David_tic_tac_toe'
-```
+    $ git clone
 
 And then execute:
 
@@ -20,9 +16,22 @@ Or install it yourself as:
 
     $ gem install David_tic_tac_toe
 
+## Testing
+
+Open terminal and navigate to the root directory of the project and execute below command
+
+    $rspec spe/
+
 ## Usage
 
-TODO: Write usage instructions here
+To play the game in a console execute the below command if your in root directory
+
+    $ ruby lib/main.rb
+    
+ or navigate to the lib folder containing main.rb file:
+ 
+    $ruby main.rb
+
 
 ## Development
 
