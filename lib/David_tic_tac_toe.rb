@@ -9,6 +9,7 @@ module DavidTicTacToe
                                    DavidTicTacToe::Player.new('Manzi', 'O'))
   def self.play
     current_player = @game.player1
+
     while true
       @game.game_board.print_board
       puts "------------------\n\nPlayer #{current_player.name}'s turn: "
@@ -22,7 +23,6 @@ module DavidTicTacToe
       return "No winner! TIED!!!!!!" if @game.game_board.board_full
 
       current_player = @game.switch_players(current_player)
-
     end
   end
 end

@@ -10,3 +10,4 @@
 # rspec failure tracking
 .rspec_status
 test_ruby.rb
+while_spec.rb

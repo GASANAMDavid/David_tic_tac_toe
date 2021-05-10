@@ -13,30 +13,28 @@ module DavidTicTacToe
       return player2 if current_player == player1
     end
 
-    def won_the_game(player_mark)
+    def won_the_game(mark)
       board = @game_board.board
       board_size = board.size
-      mark = player_mark
+      check_rows = []
 
       board.each do |row|
-        return true if check_uniqueness(row, mark)
+        check_rows << row
       end
 
       board.transpose.each do |row|
-        return true if check_uniqueness(row, mark)
+        check_rows << row
       end
 
-      main_diagnal = (0..board_size - 1).collect do |item|
+      check_rows << (0..board_size - 1).collect do |item|
         board[item][item]
       end
 
-      return true if check_uniqueness(main_diagnal, mark)
-
-      counter_diagnal = (0..board_size - 1).collect do |item|
+      check_rows << (0..board_size - 1).collect do |item|
         board[item][board_size - (item + 1)]
       end
 
-      check_uniqueness(counter_diagnal, mark)
+      check_rows.any? { |row| check_uniqueness(row, mark) }
     end
 
     def check_uniqueness(row, mark)
