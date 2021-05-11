@@ -11,6 +11,7 @@ RSpec.describe DavidTicTacToe do
       expect(DavidTicTacToe.play).to eq("David has won!!!!!!!")
     end
   end
+
   it "should expect the game to be Tied" do
     allow(DavidTicTacToe).to receive(:gets).and_return('0, 0', '0, 1', '0, 2', '1, 1', '1, 0', '1, 2', '2, 1', '2 0',
                                                        '2 2')
