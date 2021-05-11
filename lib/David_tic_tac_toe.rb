@@ -19,7 +19,7 @@ module DavidTicTacToe
       next unless @game.game_board.valid_position(indices)
 
       @game.game_board.add_play_to_board(indices, current_player.marker)
-      return "#{current_player.name} has Won!!!!!!!" if @game.won_the_game(current_player.marker)
+      return "#{current_player.name} has won!!!!!!!" if @game.won_the_game(current_player.marker)
       return "No winner! TIED!!!!!!" if @game.game_board.board_full
 
       current_player = @game.switch_players(current_player)
