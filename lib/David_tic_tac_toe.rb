@@ -16,7 +16,7 @@ module DavidTicTacToe
       input = gets.chomp
       indices = input.split(' ', 2)
       indices = indices.map(&:to_i)
-      next unless @game.game_board.valid_position(indices)
+      next unless @game.game_board.valid_position(indices) || @game.game_board.board_full
 
       @game.game_board.add_play_to_board(indices, current_player.marker)
       return "#{current_player.name} has won!!!!!!!" if @game.won_the_game(current_player.marker)
