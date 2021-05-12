@@ -1,4 +1,5 @@
 require "David_tic_tac_toe"
+require "stringio"
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
@@ -9,5 +10,17 @@ RSpec.configure do |config|
 
   config.expect_with :rspec do |c|
     c.syntax = :expect
+  end
+
+  config.before(:all) do
+    @original_stderr = $stderr
+    @original_stdout = $stdout
+    $stderr = StringIO.new
+    $stdout = StringIO.new
+  end
+
+  config.after(:all) do
+    $stderr = @original_stderr
+    $stdout = @original_stdout
   end
 end
