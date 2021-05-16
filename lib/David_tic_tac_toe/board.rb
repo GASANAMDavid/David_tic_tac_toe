@@ -24,6 +24,8 @@ module DavidTicTacToe
 
     def valid_position(indices)
       @board[indices[0]][indices[1]].to_s.include?(DENOTE_EMPTY)
+    rescue StandardError => e
+      false
     end
   end
 end
