@@ -1,7 +1,6 @@
 require_relative 'board'
 module Validation
   def self.validate_input(input)
-    input.gsub!(/[[:space:]]/, '')
     user_input = input.split(',')
     (user_input.length == 2) && user_input.all?(/[0-9]/)
   end

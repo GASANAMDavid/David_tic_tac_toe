@@ -4,7 +4,7 @@ RSpec.describe Validation do
   let(:input) { '12 , 12,a' }
   context '.validate_input' do
     it "should return false if user entered an input without a comma" do
-      expect(subject.validate_input('1')).to eq false
+      expect(subject.validate_input('1 ')).to eq false
     end
 
     it "should return false if entered multiple comma separated inputs" do
@@ -12,7 +12,7 @@ RSpec.describe Validation do
     end
 
     it "should return false if input contains a non numeric character" do
-      expect(subject.validate_input('12,a')).to eq false
+      expect(subject.validate_input('12,   a ')).to eq false
     end
 
     it "should return true if input is separated by a single comma and contains only numeric characters" do
