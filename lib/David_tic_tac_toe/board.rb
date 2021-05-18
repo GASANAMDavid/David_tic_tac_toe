@@ -2,10 +2,10 @@ module DavidTicTacToe
   class Board
     attr_reader :board
 
-    DENOTE_EMPTY = "_"
+    @@denote_empty = '_'
 
     def initialize(size = 3)
-      @board = Array.new(size) { Array.new(size) { DENOTE_EMPTY } }
+      @board = Array.new(size) { Array.new(size) { @@denote_empty } }
     end
 
     def add_play_to_board(indices, mark)
@@ -19,11 +19,7 @@ module DavidTicTacToe
     end
 
     def board_full
-      !@board.to_s.include?(DENOTE_EMPTY)
-    end
-
-    def valid_position(indices)
-      @board[indices[0]][indices[1]].to_s.include?(DENOTE_EMPTY)
+      !@board.to_s.include?(@@denote_empty)
     end
   end
 end
