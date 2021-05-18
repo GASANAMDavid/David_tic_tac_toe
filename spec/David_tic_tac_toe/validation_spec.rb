@@ -2,12 +2,14 @@ require_relative '../../lib/David_tic_tac_toe/validation'
 
 RSpec.describe Validation do
   let(:input) { '12 , 12,a' }
-  it "should return false if input is not separated by a single comma" do
-    expect(subject.validate_input(input)).to eq false
-  end
+  context '.validate_input' do
+    it "should return false if input is not separated by a single comma" do
+      expect(subject.validate_input(input)).to eq false
+    end
 
-  it "should return false if input contains a non numeric character" do
-    expect(subject.validate_input('12,a')).to eq false
+    it "should return false if input contains a non numeric character" do
+      expect(subject.validate_input('12,a')).to eq false
+    end
   end
 
   context ".validate_position" do
