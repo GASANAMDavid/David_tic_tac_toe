@@ -31,15 +31,4 @@ RSpec.describe DavidTicTacToe::Board do
   it "should return false when board is not full" do
     expect(my_board.board_full).to eq false
   end
-
-  it "should return true if the indices specified is available to play" do
-    indices = [2, 0]
-    expect(my_board.valid_position(indices)).to eq true
-  end
-
-  it "should return false if the indices specificied is already occupied" do
-    indices = [2, 0]
-    my_board.add_play_to_board(indices, 'O')
-    expect(my_board.valid_position(indices)).to eq false
-  end
 end
