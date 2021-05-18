@@ -20,7 +20,6 @@ module DavidTicTacToe
 
       indices = input.split(',', 2)
       indices = indices.map(&:to_i)
-      # puts indices
       next unless Validation.validate_position(indices, game.game_board.board)
 
       game.game_board.add_play_to_board(indices, current_player.marker)
